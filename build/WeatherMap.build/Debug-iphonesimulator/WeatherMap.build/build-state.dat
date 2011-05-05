@@ -1,19 +1,19 @@
 TWeatherMap
 v7
 r0
-t326281446.274842
+t326310350.119241
 cCheck dependencies
-cProcessInfoPlistFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist WeatherMap-Info.plist
-cCompileXIB /Users/Kipagami/Documents/WeatherMap/MainWindow.xib
-cCompileXIB /Users/Kipagami/Documents/WeatherMap/RootViewController.xib
-cProcessPCH /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o /Users/Kipagami/Documents/WeatherMap/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap normal i386
-cGenerateDSYMFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
-cTouch /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+cProcessInfoPlistFile /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/Info.plist WeatherMap-Info.plist
+cCompileXIB /Users/snazzy/Desktop/group315/IT-499-Group-Project/MainWindow.xib
+cCompileXIB /Users/snazzy/Desktop/group315/IT-499-Group-Project/RootViewController.xib
+cProcessPCH /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap normal i386
+cGenerateDSYMFile /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app.dSYM /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+cTouch /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
 c000000004CC128950000000000000110
@@ -131,9 +131,9 @@ s8498
 i"yajl_common.h"
 
 N/Users/Kipagami/Documents/Weather/YAJLiOS.framework/YAJLiOS
-c000000004D6FF62700000000000A511C
-t1299183143
-s676124
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.h
 c000000004DC242440000000000000382
@@ -251,6 +251,187 @@ t1304018647
 s371
 i<UIKit/UIKit.h>
 
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/NSBundle+YAJL.h
+c000000004D6FF627000000000000090E
+t1299183143
+s2318
+i"YAJLParser.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/NSObject+YAJL.h
+c000000004D6FF6270000000000001525
+t1299183143
+s5413
+i"YAJLGen.h"
+i"YAJLParser.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/YAJL.h
+c000000004D6FF6270000000000001A04
+t1299183143
+s6660
+i"YAJLParser.h"
+i"YAJLDocument.h"
+i"YAJLGen.h"
+i"NSObject+YAJL.h"
+i"NSBundle+YAJL.h"
+i<YAJL/YAJL.h>
+i<YAJLiOS/YAJL.h>
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/YAJLDocument.h
+c000000004D6FF6270000000000001C2B
+t1299183143
+s7211
+i"YAJLParser.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/YAJLGen.h
+c000000004D6FF627000000000000102E
+t1299183143
+s4142
+i"yajl_gen.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/YAJLParser.h
+c000000004D6FF62700000000000015E8
+t1299183143
+s5608
+i"yajl_parse.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/yajl_common.h
+c000000004D6FF6270000000000000C3B
+t1299183143
+s3131
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/yajl_gen.h
+c000000004D6FF6270000000000001C28
+t1299183143
+s7208
+i"yajl_common.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/Headers/yajl_parse.h
+c000000004D6FF6270000000000002132
+t1299183143
+s8498
+i"yajl_common.h"
+
+N/Users/snazzy/Desktop/Spring '11 Classes/IT315/YAJLiOS.framework/YAJLiOS
+c000000004D6FF62700000000000A511C
+t1299183143
+s676124
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.h
+c000000004DC248220000000000000382
+t1304578082
+s898
+i<UIKit/UIKit.h>
+i<CoreLocation/CoreLocation.h>
+i<MapKit/MapKit.h>
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m
+c000000004DC248220000000000001875
+t1304578082
+s6261
+i"RootViewController.h"
+i"WeatherMapAnnotation.h"
+i<CoreLocation/CoreLocation.h>
+i<YAJLiOS/YAJL.h>
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.h
+c000000004DC248220000000000000245
+t1304578082
+s581
+i<Foundation/Foundation.h>
+i<MapKit/MapKit.h>
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m
+c000000004DC24822000000000000017C
+t1304578082
+s380
+i"WeatherMapAnnotation.h"
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.h
+c000000004DC2482200000000000001E3
+t1304578082
+s483
+i<UIKit/UIKit.h>
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m
+c000000004DC248220000000000000ABA
+t1304578082
+s2746
+i"WeatherMapAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/MainWindow.xib
+c000000004DC248220000000000006000
+t1304578082
+s24576
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/RootViewController.xib
+c000000004DC24822000000000000476E
+t1304578082
+s18286
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/WeatherMap_Prefix.pch
+c000000004DC248220000000000000146
+t1304578082
+s326
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app
+t1304617460
+s238
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app.dSYM
+t1304617460
+s102
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/Info.plist
+t1304578082
+s603
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/MainWindow.nib
+t1304578082
+s1512
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/PkgInfo
+t1304578082
+s8
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/RootViewController.nib
+t1304578082
+s1152
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+t1304617460
+s127976
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o
+t1304617460
+s59932
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList
+c000000004DC2E1A30000000000000263
+t1304617379
+s611
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o
+t1304617460
+s12320
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o
+t1304617460
+s53348
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o
+t1304617460
+s6328
+
+N/Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m
+c000000004DC248220000000000000173
+t1304578082
+s371
+i<UIKit/UIKit.h>
+
 N/var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch.gch
 t1304563293
 s15453392
@@ -259,14 +440,22 @@ N/var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/Shared
 t1304559441
 s15453392
 
+N/var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch.gch
+t1304617460
+s15453392
+
+N/var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-dxdbkilvofswpnccfqaxzgfqliro/WeatherMap_Prefix.pch.gch
+t1304617380
+s15453392
+
 NWeatherMap-Info.plist
-c000000004DB9BED7000000000000038D
-t1304018647
+c000000004DC24822000000000000038D
+t1304578082
 s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies326281446#326281446#0(0"0(0#1#0"8640066336#0"0#
+lSLF07#2@18"Check dependencies326310350#326310350#0(0"0(0#1#0"8604222368#0"0#
 
 CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s326281405.892592
@@ -283,6 +472,21 @@ o/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m: In function 
 o/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m:90: warning: local declaration of 'mapView' hides instance variable
 lSLF07#2@73"Compile /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m326281405#326281406#0(265"/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m: In function '-[RootViewController mapView:viewForAnnotation:]':/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m:90: warning: local declaration of 'mapView' hides instance variable1(22@54"Local declaration of 'mapView' hides instance variable326281406#131#134#0(6@65"/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m326281405#90#0#90#0#0"0(0#0#65"/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m8639535136#2038"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/../Weather -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o0#
 
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326310260.433139
+e326310260.563340
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m: In function '-[RootViewController mapView:viewForAnnotation:]':
+o/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m:90: warning: local declaration of 'mapView' hides instance variable
+lSLF07#2@88"Compile /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m326310260#326310260#0(295"/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m: In function '-[RootViewController mapView:viewForAnnotation:]':/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m:90: warning: local declaration of 'mapView' hides instance variable1(22@54"Local declaration of 'mapView' hides instance variable326310260#146#149#0(6@80"/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m326270882#90#0#90#0#0"0(0#0#80"/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m8602728480#2305"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather "-F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../../Spring '11 Classes/IT315" -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/include -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/RootViewController.m -o /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o0#
+
 CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s326264806.634654
 e326264806.736756
@@ -295,6 +499,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@75"Compile /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m326264806#326264806#0(0"0(0#0#67"/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m8638831264#2042"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/../Weather -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326310260.473920
+e326310260.546909
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m326310260#326310260#0(0"0(0#0#82"/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m8606064384#2309"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather "-F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../../Spring '11 Classes/IT315" -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/include -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAnnotation.m -o /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAnnotation.o0#
 
 CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s326269380.279681
@@ -309,6 +526,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@76"Compile /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m326269380#326269380#0(0"0(0#0#68"/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m8633871520#2044"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/../Weather -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o0#
 
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326310260.373250
+e326310260.473818
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m326310260#326310260#0(0"0(0#0#83"/Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m8598366272#2311"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather "-F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../../Spring '11 Classes/IT315" -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/include -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/Classes/WeatherMapAppDelegate.m -o /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o0#
+
 CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o /Users/Kipagami/Documents/WeatherMap/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s326256093.676026
 e326256093.738954
@@ -321,6 +551,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@51"Compile /Users/Kipagami/Documents/WeatherMap/main.m326256093#326256093#0(0"0(0#0#43"/Users/Kipagami/Documents/WeatherMap/main.m8623082464#2002"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/../Weather -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/main.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o /Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326310260.371490
+e326310260.433036
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m326310260#326310260#0(0"0(0#0#58"/Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m8596086336#2269"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather "-F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../../Spring '11 Classes/IT315" -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/include -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/main.m -o /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o0#
 
 CCompileXIB /Users/Kipagami/Documents/WeatherMap/MainWindow.xib
 s326252234.867602
@@ -338,6 +581,12 @@ xCompileXIB
 x/Users/Kipagami/Documents/WeatherMap/RootViewController.xib
 lSLF07#2@33"CompileXIB RootViewController.xib326266438#326266439#0(0"0(0#0#59"/Users/Kipagami/Documents/WeatherMap/RootViewController.xib8620545376#583"    cd /Users/Kipagami/Documents/WeatherMap    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/RootViewController.nib /Users/Kipagami/Documents/WeatherMap/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
 
+CCompileXIB /Users/snazzy/Desktop/group315/IT-499-Group-Project/MainWindow.xib
+r0
+
+CCompileXIB /Users/snazzy/Desktop/group315/IT-499-Group-Project/RootViewController.xib
+r0
+
 CGenerateDSYMFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
 s326281406.188074
 e326281406.217220
@@ -346,6 +595,15 @@ xGenerateDSYMFile
 x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM
 x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
 lSLF07#2@118"GenerateDSYMFile build/Debug-iphonesimulator/WeatherMap.app.dSYM build/Debug-iphonesimulator/WeatherMap.app/WeatherMap326281406#326281406#0(0"0(0#0#90"/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap8638320704#386"    cd /Users/Kipagami/Documents/WeatherMap    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap -o /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM0#
+
+CGenerateDSYMFile /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app.dSYM /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+s326310260.602771
+e326310260.634088
+r1
+xGenerateDSYMFile
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app.dSYM
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+lSLF07#2@118"GenerateDSYMFile build/Debug-iphonesimulator/WeatherMap.app.dSYM build/Debug-iphonesimulator/WeatherMap.app/WeatherMap326310260#326310260#0(0"0(0#0#105"/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap8602965536#431"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap -o /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app.dSYM0#
 
 CLd /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap normal i386
 s326281406.149771
@@ -357,6 +615,17 @@ xnormal
 xi386
 lSLF07#2@95"Link /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap326281406#326281406#0(0"0(0#0#0"8604536384#1032"    cd /Users/Kipagami/Documents/WeatherMap    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/../Weather -filelist /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList -mmacosx-version-min=10.6 -all_load -ObjC -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreLocation -framework MapKit -framework YAJLiOS -o /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap0#
 
+CLd /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap normal i386
+s326310260.563432
+e326310260.602676
+r1
+xLd
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+xnormal
+xi386
+old: warning: directory '/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather' following -F not found
+lSLF07#2@110"Link /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap326310260#326310260#0(111"ld: warning: directory '/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather' following -F not found1(22@97"Directory '/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather' following -F not found326310260#0#111#0(6@0"326310260#0#0#0#0#0"0(0#0#0"8603940448#1209"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather "-F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../../Spring '11 Classes/IT315" -filelist /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList -mmacosx-version-min=10.6 -all_load -ObjC -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreLocation -framework MapKit -framework YAJLiOS -o /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap0#
+
 CProcessInfoPlistFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist WeatherMap-Info.plist
 s326252234.797261
 e326252234.867514
@@ -365,6 +634,9 @@ xProcessInfoPlistFile
 x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist
 xWeatherMap-Info.plist
 lSLF07#2@29"Process WeatherMap-Info.plist326252234#326252234#0(0"0(0#0#58"/Users/Kipagami/Documents/WeatherMap/WeatherMap-Info.plist28429445101453416#482"    cd /Users/Kipagami/Documents/WeatherMap    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility WeatherMap-Info.plist -genpkginfo /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist0#
+
+CProcessInfoPlistFile /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app/Info.plist WeatherMap-Info.plist
+r0
 
 CProcessPCH /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-cllpyddifnfspgfkfvrpgwggjosz/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s326256092.768409
@@ -392,6 +664,32 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@32"Precompile WeatherMap_Prefix.pch326252238#326252241#0(0"0(0#0#58"/Users/Kipagami/Documents/WeatherMap/WeatherMap_Prefix.pch8606318912#1843"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -c /Users/Kipagami/Documents/WeatherMap/WeatherMap_Prefix.pch -o /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch.gch0#
 
+CProcessPCH /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s326310259.728906
+e326310260.371223
+r1
+xProcessPCH
+x/var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch.gch
+xWeatherMap_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile WeatherMap_Prefix.pch326310259#326310260#0(0"0(0#0#73"/Users/snazzy/Desktop/group315/IT-499-Group-Project/WeatherMap_Prefix.pch8097838758711817216#2145"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather "-F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../../Spring '11 Classes/IT315" -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/include -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/WeatherMap_Prefix.pch -o /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-czjsdhrbmvwbnkfkmarpettraxca/WeatherMap_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-dxdbkilvofswpnccfqaxzgfqliro/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s326310179.800311
+e326310180.463575
+r1
+xProcessPCH
+x/var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-dxdbkilvofswpnccfqaxzgfqliro/WeatherMap_Prefix.pch.gch
+xWeatherMap_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile WeatherMap_Prefix.pch326310179#326310180#0(0"0(0#0#73"/Users/snazzy/Desktop/group315/IT-499-Group-Project/WeatherMap_Prefix.pch8097838758711817216#2058"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator -F/Users/snazzy/Desktop/group315/IT-499-Group-Project/../Weather -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/include -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/WeatherMap_Prefix.pch -o /var/folders/x2/x2rTVPiUGnuhOo+4nbLnXk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-dxdbkilvofswpnccfqaxzgfqliro/WeatherMap_Prefix.pch.gch0#
+
 CTouch /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
 s326281406.217310
 e326281406.219944
@@ -399,4 +697,12 @@ r1
 xTouch
 x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
 lSLF07#2@85"Touch /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app326281406#326281406#0(0"0(0#0#0"8636726432#277"    cd /Users/Kipagami/Documents/WeatherMap    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app0#
+
+CTouch /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app
+s326310260.634161
+e326310260.636953
+r1
+xTouch
+x/Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app
+lSLF07#2@100"Touch /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app326310260#326310260#0(0"0(0#0#0"8601089824#307"    cd /Users/snazzy/Desktop/group315/IT-499-Group-Project    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/snazzy/Desktop/group315/IT-499-Group-Project/build/Debug-iphonesimulator/WeatherMap.app0#
 
