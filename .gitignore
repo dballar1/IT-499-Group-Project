@@ -1,0 +1,4 @@
+build/
+.DS_Store
+WeatherMap.xcodeproj/*.pbxuser
+WeatherMap.xcodeproj/*.perspectivev3
