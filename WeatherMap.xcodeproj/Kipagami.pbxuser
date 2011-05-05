@@ -3427,6 +3427,36 @@
 		vrLen = 739;
 		vrLoc = 5330;
 	};
+	14723AFC1373189C00D08530 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 26";
+		rLen = 0;
+		rLoc = 616;
+		rType = 0;
+		vrLen = 849;
+		vrLoc = 0;
+	};
+	14723AFD1373189D00D08530 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 26";
+		rLen = 0;
+		rLoc = 616;
+		rType = 0;
+		vrLen = 767;
+		vrLoc = 0;
+	};
+	14723AFE137319C000D08530 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 26";
+		rLen = 0;
+		rLoc = 616;
+		rType = 0;
+		vrLen = 530;
+		vrLoc = 319;
+	};
 	1D6058900D05DD3D006BFB54 /* WeatherMap */ = {
 		activeExec = 0;
 		executables = (
@@ -3442,9 +3472,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1219, 2639}}";
-			sepNavSelRange = "{5753, 0}";
-			sepNavVisRange = "{5330, 739}";
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 2431}}";
+			sepNavSelRange = "{616, 0}";
+			sepNavVisRange = "{319, 530}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -3821,6 +3851,9 @@
 			14723AEF1372A79200D08530 /* PBXTextBookmark */ = 14723AEF1372A79200D08530 /* PBXTextBookmark */;
 			14723AF01372A79300D08530 /* PBXTextBookmark */ = 14723AF01372A79300D08530 /* PBXTextBookmark */;
 			14723AF11372A7A400D08530 /* PBXTextBookmark */ = 14723AF11372A7A400D08530 /* PBXTextBookmark */;
+			14723AFC1373189C00D08530 /* PBXTextBookmark */ = 14723AFC1373189C00D08530 /* PBXTextBookmark */;
+			14723AFD1373189D00D08530 /* PBXTextBookmark */ = 14723AFD1373189D00D08530 /* PBXTextBookmark */;
+			14723AFE137319C000D08530 /* PBXTextBookmark */ = 14723AFE137319C000D08530 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 147236B71369F65A00D08530 /* Source Control */;
 		userBuildSettings = {
