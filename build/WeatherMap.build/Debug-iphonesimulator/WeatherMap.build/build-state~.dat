@@ -1,0 +1,262 @@
+TWeatherMap
+v7
+r0
+t326252242.162526
+cCheck dependencies
+cProcessInfoPlistFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist WeatherMap-Info.plist
+cCompileXIB /Users/Kipagami/Documents/WeatherMap/MainWindow.xib
+cCompileXIB /Users/Kipagami/Documents/WeatherMap/RootViewController.xib
+cProcessPCH /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o /Users/Kipagami/Documents/WeatherMap/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap normal i386
+cGenerateDSYMFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+cTouch /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.h
+c000000004DB9BED700000000000000F5
+t1304018647
+s245
+i<UIKit/UIKit.h>
+
+N/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m
+c000000004DB9BED700000000000010CD
+t1304018647
+s4301
+i"RootViewController.h"
+
+N/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.h
+c000000004DB9BED700000000000001E3
+t1304018647
+s483
+i<UIKit/UIKit.h>
+
+N/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m
+c000000004DB9BED70000000000000ABA
+t1304018647
+s2746
+i"WeatherMapAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/Kipagami/Documents/WeatherMap/MainWindow.xib
+c000000004DB9BED70000000000006000
+t1304018647
+s24576
+
+N/Users/Kipagami/Documents/WeatherMap/RootViewController.xib
+c000000004DB9BED70000000000004455
+t1304018647
+s17493
+
+N/Users/Kipagami/Documents/WeatherMap/WeatherMap_Prefix.pch
+c000000004DB9BED70000000000000146
+t1304018647
+s326
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+t1304559442
+s238
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM
+t1304559442
+s102
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist
+t1304559434
+s603
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/MainWindow.nib
+t1304559438
+s1512
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/PkgInfo
+t1304559434
+s8
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/RootViewController.nib
+t1304559438
+s979
+
+N/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+t1304559442
+s18096
+
+N/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o
+t1304559441
+s41156
+
+N/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList
+c000000004DC1FF4A0000000000000199
+t1304559434
+s409
+
+N/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o
+t1304559441
+s52760
+
+N/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o
+t1304559441
+s6300
+
+N/Users/Kipagami/Documents/WeatherMap/main.m
+c000000004DB9BED70000000000000173
+t1304018647
+s371
+i<UIKit/UIKit.h>
+
+N/var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch.gch
+t1304559441
+s15453392
+
+NWeatherMap-Info.plist
+c000000004DB9BED7000000000000038D
+t1304018647
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies326252234#326252234#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326252241.647926
+e326252241.719104
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o
+x/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m326252241#326252241#0(0"0(0#0#65"/Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m8604593472#1988"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/Classes/RootViewController.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326252241.501714
+e326252241.664082
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o
+x/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m326252241#326252241#0(0"0(0#0#68"/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m8606278176#1994"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAppDelegate.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMapAppDelegate.o0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o /Users/Kipagami/Documents/WeatherMap/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s326252241.500316
+e326252241.647808
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o
+x/Users/Kipagami/Documents/WeatherMap/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/Kipagami/Documents/WeatherMap/main.m326252241#326252241#0(0"0(0#0#43"/Users/Kipagami/Documents/WeatherMap/main.m8599954880#1952"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -include /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch -c /Users/Kipagami/Documents/WeatherMap/main.m -o /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/Kipagami/Documents/WeatherMap/MainWindow.xib
+s326252234.867602
+e326252238.452359
+r1
+xCompileXIB
+x/Users/Kipagami/Documents/WeatherMap/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib326252234#326252238#0(0"0(0#0#51"/Users/Kipagami/Documents/WeatherMap/MainWindow.xib8600038976#567"    cd /Users/Kipagami/Documents/WeatherMap    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/MainWindow.nib /Users/Kipagami/Documents/WeatherMap/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/Kipagami/Documents/WeatherMap/RootViewController.xib
+s326252234.894427
+e326252238.452653
+r1
+xCompileXIB
+x/Users/Kipagami/Documents/WeatherMap/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib326252234#326252238#0(0"0(0#0#59"/Users/Kipagami/Documents/WeatherMap/RootViewController.xib8604259776#583"    cd /Users/Kipagami/Documents/WeatherMap    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/RootViewController.nib /Users/Kipagami/Documents/WeatherMap/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CGenerateDSYMFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+s326252242.062932
+e326252242.125653
+r1
+xGenerateDSYMFile
+x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM
+x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+lSLF07#2@118"GenerateDSYMFile build/Debug-iphonesimulator/WeatherMap.app.dSYM build/Debug-iphonesimulator/WeatherMap.app/WeatherMap326252242#326252242#0(0"0(0#0#90"/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap8606219104#386"    cd /Users/Kipagami/Documents/WeatherMap    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap -o /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM0#
+
+CLd /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap normal i386
+s326252241.719194
+e326252242.062829
+r1
+xLd
+x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+xnormal
+xi386
+lSLF07#2@95"Link /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap326252241#326252242#0(0"0(0#0#0"8604394144#905"    cd /Users/Kipagami/Documents/WeatherMap    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -filelist /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap0#
+
+CProcessInfoPlistFile /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist WeatherMap-Info.plist
+s326252234.797261
+e326252234.867514
+r1
+xProcessInfoPlistFile
+x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist
+xWeatherMap-Info.plist
+lSLF07#2@29"Process WeatherMap-Info.plist326252234#326252234#0(0"0(0#0#58"/Users/Kipagami/Documents/WeatherMap/WeatherMap-Info.plist28429445101453416#482"    cd /Users/Kipagami/Documents/WeatherMap    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility WeatherMap-Info.plist -genpkginfo /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist0#
+
+CProcessPCH /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s326252238.452767
+e326252241.499961
+r1
+xProcessPCH
+x/var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch.gch
+xWeatherMap_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile WeatherMap_Prefix.pch326252238#326252241#0(0"0(0#0#58"/Users/Kipagami/Documents/WeatherMap/WeatherMap_Prefix.pch8606318912#1843"    cd /Users/Kipagami/Documents/WeatherMap    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap -iquote /Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap -F/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator -I/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/include -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386 -I/Users/Kipagami/Documents/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources -c /Users/Kipagami/Documents/WeatherMap/WeatherMap_Prefix.pch -o /var/folders/jo/jovAtf+RF40sxTvQt015oU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-gdekhsrqgqohlndxlgaurobygkbn/WeatherMap_Prefix.pch.gch0#
+
+CTouch /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+s326252242.125736
+e326252242.162453
+r1
+xTouch
+x/Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+lSLF07#2@85"Touch /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app326252242#326252242#0(0"0(0#0#0"8606053920#277"    cd /Users/Kipagami/Documents/WeatherMap    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Kipagami/Documents/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app0#
+

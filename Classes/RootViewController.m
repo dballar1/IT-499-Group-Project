@@ -7,22 +7,52 @@
 //
 
 #import "RootViewController.h"
-
+#import "WeatherMapAnnotation.h"
+#import <CoreLocation/CoreLocation.h>
+#import <YAJLiOS/YAJL.h>
 
 @implementation RootViewController
 
+@synthesize mapView, responseData, forecasts;
+//@synthesize annotationList;
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.title = @"Weather Map";
+	self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Edit" 
+																			 style:UIBarButtonItemStyleBordered 
+																			target:self 
+																			 action:@selector(showLocationTable)] autorelease];
+	/*
+	NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
+    NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%d&format=json&num_of_days=5&key=%@&includeLocation=yes", 
+                        22030,
+                        @"b86e961893190455111404"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+	*/
+	
 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	myLocation.latitude = 38.84;
+	myLocation.longitude = -77.35;
+	// Set Location to Fairfax
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = myLocation.latitude; //38.84;
+    newRegion.center.longitude = myLocation.longitude; //-77.35;
+    newRegion.span.latitudeDelta = 0.50;
+    newRegion.span.longitudeDelta = 0.50;
+	//newRegion.span.latitudeDelta = 20;
+	//newRegion.span.longitudeDelta = 20;
+	
+    [self.mapView setRegion:newRegion animated:YES];
+	if ([CLLocationManager locationServicesEnabled]) {
+		CLLocationManager *manager = [[CLLocationManager alloc] init];
+		manager.delegate = self;
+		[manager startUpdatingLocation];
+	}
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -53,92 +83,93 @@
 }
  */
 
+#pragma mark -
+#pragma mark Delegate Methods
+
+- (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation {
+	MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: [annotation title]];
+	if (pin == nil) {
+		pin = [[[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]] autorelease];
+	} else {
+		pin.annotation = annotation;
+	}
+	pin.pinColor = MKPinAnnotationColorRed;
+	pin.animatesDrop = YES;
+	pin.canShowCallout = TRUE;
+	return pin;
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    responseData = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"Error loading: %@", error);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSDictionary *json = [responseData yajl_JSON];
+    self.forecasts = [json valueForKeyPath:@"data.weather"];
+	[self placeAnnotations];
+}
+
+- (void)locationManager:(CLLocationManager *)manager 
+    didUpdateToLocation:(CLLocation *)newLocation 
+           fromLocation:(CLLocation *)oldLocation {
+	
+    NSLog(@"location = %@", newLocation);   
+    NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
+    NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%f,%f&format=json&num_of_days=5&key=%@", 
+                        newLocation.coordinate.latitude, 
+                        newLocation.coordinate.longitude,
+                        @"b86e961893190455111404"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    [manager stopUpdatingLocation];
+}
 
 #pragma mark -
-#pragma mark Table view data source
+#pragma mark RootViewController actions
 
-// Customize the number of sections in the table view.
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+-(IBAction) showLocationTable {
+	NSLog(@"Load Zipcode List");
 }
 
-
-// Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-	// Configure the cell.
-
-    return cell;
-}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-#pragma mark -
-#pragma mark Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void) placeAnnotations {
+	// URL for location based annotation
 	/*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
+	 NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
+	 NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%f,%f&format=json&num_of_days=5&key=%@", 
+														myLocation.latitude, 
+														myLocation.longitude,
+														@"b86e961893190455111404"];
+	 NSURL *url = [NSURL URLWithString:urlStr];
+	 NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	 NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
 	 */
+	
+	// Basic Annotation creation to be replaced by PList locations
+	WeatherMapAnnotation *newAnnotation = [WeatherMapAnnotation alloc];
+	CLLocationCoordinate2D location;
+	location.latitude = 38.84;
+	location.longitude = -77.35;
+	[newAnnotation setCoordinate: location];
+	[newAnnotation setTitle: @"Zipcode/Title"];
+	
+	NSDictionary *forecast = [forecasts objectAtIndex:0];
+	NSLog(@"forecast = %@", [forecasts objectAtIndex:0]);
+	NSString *weather = [NSString stringWithFormat:@"%@°F - %@°F: %@",
+						 [forecast objectForKey:@"tempMinF"],
+						 [forecast objectForKey:@"tempMaxF"],
+						 [[forecast valueForKeyPath:@"weatherDesc.value"] objectAtIndex:0]];
+	[newAnnotation setSubtitle: weather];
+	[mapView addAnnotation: newAnnotation];
 }
-
 
 #pragma mark -
 #pragma mark Memory management
@@ -157,6 +188,7 @@
 
 
 - (void)dealloc {
+	[mapView dealloc];
     [super dealloc];
 }
 

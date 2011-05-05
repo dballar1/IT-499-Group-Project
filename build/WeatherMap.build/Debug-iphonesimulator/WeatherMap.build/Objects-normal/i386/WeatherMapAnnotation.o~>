@@ -1,0 +1,3 @@
+/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m:13: error: no declaration of property 'coordinate' found in the interface
+/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m:13: error: no declaration of property 'title' found in the interface
+/Users/Kipagami/Documents/WeatherMap/Classes/WeatherMapAnnotation.m:13: error: no declaration of property 'subtitle' found in the interface

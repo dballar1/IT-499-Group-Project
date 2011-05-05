@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		147236EE13723D4000D08530 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147236ED13723D4000D08530 /* CoreLocation.framework */; };
+		147236F213723D4E00D08530 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147236F113723D4E00D08530 /* MapKit.framework */; };
+		147237961372452200D08530 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147237951372452200D08530 /* YAJLiOS.framework */; };
+		1472391D1372674400D08530 /* WeatherMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1472391C1372674400D08530 /* WeatherMapAnnotation.m */; };
 		1D3623260D0F684500981E51 /* WeatherMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WeatherMapAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -18,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		147236ED13723D4000D08530 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		147236F113723D4E00D08530 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		147237951372452200D08530 /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJLiOS.framework; path = /Users/Kipagami/Documents/Weather/YAJLiOS.framework; sourceTree = "<absolute>"; };
+		1472391B1372674400D08530 /* WeatherMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherMapAnnotation.h; sourceTree = "<group>"; };
+		1472391C1372674400D08530 /* WeatherMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherMapAnnotation.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* WeatherMapAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherMapAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* WeatherMapAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherMapAppDelegate.m; sourceTree = "<group>"; };
@@ -41,6 +50,9 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				147236EE13723D4000D08530 /* CoreLocation.framework in Frameworks */,
+				147236F213723D4E00D08530 /* MapKit.framework in Frameworks */,
+				147237961372452200D08530 /* YAJLiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +66,8 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* WeatherMapAppDelegate.h */,
 				1D3623250D0F684500981E51 /* WeatherMapAppDelegate.m */,
+				1472391B1372674400D08530 /* WeatherMapAnnotation.h */,
+				1472391C1372674400D08530 /* WeatherMapAnnotation.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -100,9 +114,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				147237951372452200D08530 /* YAJLiOS.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				147236ED13723D4000D08530 /* CoreLocation.framework */,
+				147236F113723D4E00D08530 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +189,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* WeatherMapAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				1472391D1372674400D08530 /* WeatherMapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +201,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Weather\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -197,6 +219,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Weather\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WeatherMap_Prefix.pch;
 				INFOPLIST_FILE = "WeatherMap-Info.plist";
@@ -213,6 +239,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
