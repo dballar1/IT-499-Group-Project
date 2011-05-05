@@ -28,5 +28,6 @@
 
 -(IBAction) showLocationTable;
 -(void) placeAnnotations;
+-(void) calloutTapped;
 
 @end

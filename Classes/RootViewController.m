@@ -87,15 +87,28 @@
 #pragma mark Delegate Methods
 
 - (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation {
+	
+	// if it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+	
+	// Create a pin object
 	MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: [annotation title]];
 	if (pin == nil) {
-		pin = [[[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]] autorelease];
+		MKPinAnnotationView *pinView = [[[MKPinAnnotationView alloc]
+											   initWithAnnotation:annotation reuseIdentifier: [annotation title]] autorelease];
+		pinView.pinColor = MKPinAnnotationColorRed;
+		pinView.animatesDrop = YES;
+		pinView.canShowCallout = YES;
+
+		UIButton *calloutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		[calloutButton addTarget:self action:@selector(calloutTapped) forControlEvents:UIControlEventTouchUpInside];
+		pinView.rightCalloutAccessoryView = calloutButton;
+		return pinView;
 	} else {
 		pin.annotation = annotation;
 	}
-	pin.pinColor = MKPinAnnotationColorRed;
-	pin.animatesDrop = YES;
-	pin.canShowCallout = TRUE;
+	
 	return pin;
 }
 
@@ -160,7 +173,6 @@
 	location.longitude = -77.35;
 	[newAnnotation setCoordinate: location];
 	[newAnnotation setTitle: @"Zipcode/Title"];
-	
 	NSDictionary *forecast = [forecasts objectAtIndex:0];
 	NSLog(@"forecast = %@", [forecasts objectAtIndex:0]);
 	NSString *weather = [NSString stringWithFormat:@"%@°F - %@°F: %@",
@@ -169,6 +181,10 @@
 						 [[forecast valueForKeyPath:@"weatherDesc.value"] objectAtIndex:0]];
 	[newAnnotation setSubtitle: weather];
 	[mapView addAnnotation: newAnnotation];
+}
+
+-(void) calloutTapped {
+	NSLog(@"Callout Button Tapped");
 }
 
 #pragma mark -
