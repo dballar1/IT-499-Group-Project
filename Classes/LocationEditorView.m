@@ -13,14 +13,6 @@
 
 @synthesize titleField, zipCodeField, location, editingLocation;
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	self.titleField.text = location.title;
-	self.zipCodeField.text = location.zipCode;
-	//self.titleField.text = [editingLocation valueForKey:@"Title"];
-	//self.zipCodeField.text = [editingLocation valueForKey:@"Zipcode"];
-}
-
 - (IBAction)done {
 	[self.navigationController popViewControllerAnimated:YES];
 }
@@ -42,7 +34,6 @@
 	
 }
 
-
 #pragma mark -
 #pragma mark Initialization
 
@@ -61,20 +52,27 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
+											   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+											   target:self
+											   action:@selector(done)] autorelease];
 }
-*/
 
-/*
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+	[super viewWillAppear:animated];
+	if (location.title) {
+		self.title = location.title;
+	} else {
+		self.title = @"Add Location";
+	}
+	self.titleField.text = location.title;
+	self.zipCodeField.text = location.zipCode;
+	//self.titleField.text = [editingLocation valueForKey:@"Title"];
+	//self.zipCodeField.text = [editingLocation valueForKey:@"Zipcode"];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

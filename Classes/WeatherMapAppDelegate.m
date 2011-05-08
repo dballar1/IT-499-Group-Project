@@ -30,10 +30,6 @@
 		[fileManager copyItemAtPath:bundle toPath:path error:&error];
 	}
 	NSArray *locations = [[[NSArray alloc] initWithContentsOfFile: path] autorelease];
-	NSLog(@"Filepath = %@", path);
-	for (NSDictionary *location in locations) {
-		NSLog(@"Load: Title = %@, Zipcode = %@", [location objectForKey:@"Title"], [location objectForKey:@"Zipcode"]);
-	}
 	return locations;
 }
 
@@ -47,11 +43,6 @@
 		NSString *bundle = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
 		[fileManager copyItemAtPath:bundle toPath:path error:&error];
 	}
-	NSLog(@"Filepath = %@", path);
-	for (NSDictionary *location in locations) {
-		NSLog(@"Save: Title = %@, Zipcode = %@", [location objectForKey:@"Title"], [location objectForKey:@"Zipcode"]);
-	}
-	//NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
 	[locations writeToFile:path atomically:YES];
 }
 
