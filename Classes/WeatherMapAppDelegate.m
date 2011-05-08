@@ -7,14 +7,53 @@
 //
 
 #import "WeatherMapAppDelegate.h"
-#import "RootViewController.h"
+#import "MapViewController.h"
 
 
 @implementation WeatherMapAppDelegate
 
-@synthesize window;
-@synthesize navigationController;
+@synthesize window, navigationController;
 
+#pragma mark -
+#pragma mark Locations from File
+
+- (NSArray *) loadData {
+	// Create a path for plist file
+	//NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
+	NSError *error;
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"locations.plist"];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath: path]) {
+		NSString *bundle = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
+		[fileManager copyItemAtPath:bundle toPath:path error:&error];
+	}
+	NSArray *locations = [[[NSArray alloc] initWithContentsOfFile: path] autorelease];
+	NSLog(@"Filepath = %@", path);
+	for (NSDictionary *location in locations) {
+		NSLog(@"Load: Title = %@, Zipcode = %@", [location objectForKey:@"Title"], [location objectForKey:@"Zipcode"]);
+	}
+	return locations;
+}
+
+- (void) saveData:(NSMutableArray *) locations {
+	NSError *error;
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"locations.plist"];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath: path]) {
+		NSString *bundle = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
+		[fileManager copyItemAtPath:bundle toPath:path error:&error];
+	}
+	NSLog(@"Filepath = %@", path);
+	for (NSDictionary *location in locations) {
+		NSLog(@"Save: Title = %@, Zipcode = %@", [location objectForKey:@"Title"], [location objectForKey:@"Zipcode"]);
+	}
+	//NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
+	[locations writeToFile:path atomically:YES];
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -22,7 +61,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-    
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];

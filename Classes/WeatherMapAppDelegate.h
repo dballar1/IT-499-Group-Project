@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface WeatherMapAppDelegate : NSObject <UIApplicationDelegate> {
-    
     UIWindow *window;
     UINavigationController *navigationController;
+	NSArray *locationArray;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
