@@ -17,7 +17,7 @@
 	CLLocation *incomeLocation;
 }
 
-@property (nonatomic, retain) CLLocation *incomeLocation;
+@property (nonatomic, retain) IBOutlet CLLocation *incomeLocation;
 @property (nonatomic, retain) NSMutableData *responseData;
 @property (nonatomic, retain) NSArray *forecasts;
 @property (nonatomic, retain) IBOutlet UITableViewCell *nibLoadedCell;

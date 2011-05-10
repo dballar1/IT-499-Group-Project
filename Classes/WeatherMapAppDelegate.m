@@ -37,7 +37,10 @@
 	locationArray = [[NSMutableArray alloc] init];
 	NSArray *loadedArray = [[[NSArray alloc] init] autorelease];
 	loadedArray = [self loadData];
-	for (NSMutableDictionary *locationDictionary in loadedArray) {
+	NSDictionary *locationDictionary = [[[NSDictionary alloc] init] autorelease];
+	//for (NSMutableDictionary *locationDictionary in loadedArray) {
+	for (int i = 0; i < [loadedArray count]; i++) {
+		locationDictionary = [loadedArray objectAtIndex:i];
 		// Create a location array from NSDictionary
 		Location *location = [[Location alloc] init];
 		location.title = [locationDictionary valueForKey:@"Title"];
@@ -49,7 +52,10 @@
 }
 
 -(void) getConnectionData {
-	for (Location *location in locationArray) {
+	Location *location = [[[Location alloc] init] autorelease];
+	//for (Location *location in locationArray) {
+	for (int i = 0; i < [locationArray count]; i++) {
+		location = [locationArray objectAtIndex:i];
 		forecasts = [[NSMutableArray alloc] init];
 		latLong = [[NSMutableArray alloc] init];
 		NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";

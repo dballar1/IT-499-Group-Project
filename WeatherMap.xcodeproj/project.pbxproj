@@ -19,6 +19,8 @@
 		14723C3B13764B8400D08530 /* LocationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14723C3813764B8400D08530 /* LocationTableCell.xib */; };
 		1495CD1B137921470094384D /* WelcomeScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1495CD1A137921470094384D /* WelcomeScreenView.xib */; };
 		1495CD1E137921750094384D /* WelcomeScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495CD1D137921750094384D /* WelcomeScreenView.m */; };
+		1495CDFC1379415A0094384D /* WeatherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1495CDFB1379415A0094384D /* WeatherTableCell.xib */; };
+		1495CDFE1379417B0094384D /* detailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1495CDFD1379417B0094384D /* detailView.xib */; };
 		1D3623260D0F684500981E51 /* WeatherMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WeatherMapAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -49,6 +51,8 @@
 		1495CD1A137921470094384D /* WelcomeScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WelcomeScreenView.xib; path = Classes/WelcomeScreenView.xib; sourceTree = "<group>"; };
 		1495CD1C137921750094384D /* WelcomeScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScreenView.h; sourceTree = "<group>"; };
 		1495CD1D137921750094384D /* WelcomeScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScreenView.m; sourceTree = "<group>"; };
+		1495CDFB1379415A0094384D /* WeatherTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableCell.xib; sourceTree = "<group>"; };
+		1495CDFD1379417B0094384D /* detailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = detailView.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* WeatherMapAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherMapAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* WeatherMapAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherMapAppDelegate.m; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1495CDFB1379415A0094384D /* WeatherTableCell.xib */,
 				1495CD1A137921470094384D /* WelcomeScreenView.xib */,
 				142422761376899F000AFF61 /* locations.plist */,
 				14723C3613764B8400D08530 /* LocationTable.xib */,
@@ -170,6 +175,7 @@
 				28F335F01007B36200424DE2 /* MapViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* WeatherMap-Info.plist */,
+				1495CDFD1379417B0094384D /* detailView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -253,6 +259,8 @@
 				14723C3B13764B8400D08530 /* LocationTableCell.xib in Resources */,
 				142422771376899F000AFF61 /* locations.plist in Resources */,
 				1495CD1B137921470094384D /* WelcomeScreenView.xib in Resources */,
+				1495CDFC1379415A0094384D /* WeatherTableCell.xib in Resources */,
+				1495CDFE1379417B0094384D /* detailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 #import "LocationTable.h"
 #import "WeatherMapAppDelegate.h"
 #import "WeatherMapAnnotation.h"
+#import "detailView.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
@@ -21,6 +22,7 @@
 	NSMutableArray *locationArray;
 	NSMutableArray *forecasts;
 	NSMutableArray *latLong;
+	detailView *weatherDetail;
 	//NSMutableData *responseData;
 }
 
@@ -29,6 +31,7 @@
 @property (nonatomic, retain) IBOutlet LocationTable *locationTable;
 @property (nonatomic, retain) NSMutableArray *forecasts;
 @property (nonatomic, retain) NSMutableArray *latLong;
+@property (nonatomic, retain) IBOutlet detailView *weatherDetail;
 
 -(IBAction) showLocationTable;
 //-(void) getLocations;

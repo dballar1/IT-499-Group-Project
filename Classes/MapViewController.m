@@ -12,7 +12,7 @@
 
 @implementation MapViewController
 
-@synthesize mapView, locationTable, annotationList, forecasts, latLong;
+@synthesize mapView, locationTable, annotationList, forecasts, latLong, weatherDetail;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -46,16 +46,12 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 	locationArray = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] getLocations];
-	//NSLog(@"ViewController: locationArray-%d", [locationArray count]);
 	forecasts = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] forecasts];
-	//NSLog(@"ViewController: forecasts-%d", [forecasts count]);	
 	latLong = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] latLong];
-	//NSLog(@"ViewController: latLong-%d", [latLong count]);
 	[self removeAllAnnotations];
 	annotationList = nil;
 	annotationList = [[NSMutableArray alloc] init];
 	[self createAnnotations];
-	//NSLog(@"ViewController: annotationList-%d", [annotationList count]);
 	[mapView addAnnotations:annotationList];
 
 }
@@ -95,11 +91,7 @@
 		pinView.pinColor = MKPinAnnotationColorRed;
 		pinView.animatesDrop = YES;
 		pinView.canShowCallout = YES;
-		UIButton *calloutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-		[calloutButton addTarget:self
-						  action:@selector(calloutTapped)
-				forControlEvents:UIControlEventTouchUpInside];
-		pinView.rightCalloutAccessoryView = calloutButton;
+		pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 		return pinView;
 	} else {
 		pin.annotation = annotation;
@@ -107,22 +99,53 @@
 	return pin;
 }
 
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+	CLLocation *location = [[[CLLocation alloc] initWithLatitude:view.annotation.coordinate.latitude
+													  longitude:view.annotation.coordinate.longitude ] autorelease];
+	weatherDetail.incomeLocation = location;
+	[self.navigationController pushViewController:weatherDetail animated:YES];
+}
+
 #pragma mark -
 #pragma mark MapViewController actions
 
 -(void) createAnnotations {
-	NSLog(@"Forecast Objects: %d, Location Objects: %d", [forecasts count], [latLong count]);
+	/*
+	for (int i = 0; i < [locationArray count]; i++) {
+		NSLog(@"Title: %@, Temp: %@, Lat: %f, Long: %f",[[locationArray objectAtIndex:i] title],
+			  [[[forecasts objectAtIndex:i] valueForKey:@"temp_F"] objectAtIndex:0],
+			  [[[latLong objectAtIndex:i] valueForKey:@"latitude"] objectAtIndex:0],
+			  [[[latLong objectAtIndex:i] valueForKey:@"longitude"] objectAtIndex:0]);
+	}
+	 */
 	NSMutableArray *temps = [[NSMutableArray alloc] init];
+	NSDictionary *forecast = [[[NSDictionary alloc] init] autorelease];
+	for (int i = 0; i < [forecasts count]; i++) {
+		forecast = [forecasts objectAtIndex:i];
+		[temps addObject:[[forecast valueForKey:@"temp_F"] objectAtIndex:0]];
+	}
+	/*
 	for (NSDictionary *forecast in forecasts) {
 		[temps addObject:[[forecast valueForKey:@"temp_F"] objectAtIndex:0]];
 	}
+	 */
 	NSMutableArray *coords = [[NSMutableArray alloc] init];
+	NSDictionary *loc = [[[NSDictionary alloc] init] autorelease];
+	for (int i = 0; i < [latLong count]; i++) {
+		loc = [latLong objectAtIndex:i];
+		CLLocation *location = [[CLLocation alloc] initWithLatitude:[[[loc valueForKey:@"latitude"] objectAtIndex:0] doubleValue]
+														  longitude:[[[loc valueForKey:@"longitude"] objectAtIndex:0] doubleValue]];
+		[coords addObject: location];
+		[location release];
+	}
+	/*
 	for (NSDictionary *loc in latLong) {
 		CLLocation *location = [[CLLocation alloc] initWithLatitude:[[[loc valueForKey:@"latitude"] objectAtIndex:0] doubleValue]
 														  longitude:[[[loc valueForKey:@"longitude"] objectAtIndex:0] doubleValue]];
 		[coords addObject: location];
 		[location release];
 	}
+	 */
 	for (int i = 0; i < [locationArray count]; i++) {
 		CLLocation *location = [coords objectAtIndex:i];
 		WeatherMapAnnotation *annote = [[WeatherMapAnnotation alloc] initWithName:[[locationArray objectAtIndex:i] title] 
@@ -133,6 +156,8 @@
 		NSLog(@"Title = %@, Subtitle = %@, Lat = %f, Long = %f", annote.title, annote.subtitle, annote.coordinate.latitude, annote.coordinate.longitude);
 		[annote release];
 	}
+	[coords release];
+	[temps release];
 }
 
 -(void)removeAllAnnotations {
@@ -151,10 +176,6 @@
 -(IBAction) showLocationTable {
 	locationTable.locationArray = locationArray;
 	[self.navigationController pushViewController:locationTable animated:YES];
-}
-
--(void) calloutTapped {
-	NSLog(@"Callout Button Tapped");
 }
 
 #pragma mark -
@@ -179,4 +200,3 @@
 }
 
 @end
-

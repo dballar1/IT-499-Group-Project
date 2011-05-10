@@ -27,7 +27,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *json = [responseData yajl_JSON];
     self.forecasts = [json valueForKeyPath:@"data.weather"];
-    //NSLog(@"%@", forecasts);
+	[responseData release];
 	[self.tableView reloadData];
 }
 
@@ -40,16 +40,19 @@
     self.forecasts = [NSArray array];
     // Set the title that shows in the navigation bar
     self.title = @"5 Day Forecast";	
-	
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	//NSLog(@"Detail Forecast: Lat %f, Long %f", incomeLocation.coordinate.latitude, incomeLocation.coordinate.longitude);
 	NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
     NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%f,%f&format=json&num_of_days=5&key=%@", 
                         incomeLocation.coordinate.latitude, 
                         incomeLocation.coordinate.longitude,
                         @"f001a2f13e191433111404"];
-	//NSLog(@"%@", newLocation.coordinate.latitude);
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [NSURLConnection connectionWithRequest:request delegate:self];  
+    [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 #pragma mark -
@@ -153,4 +156,3 @@
 
 
 @end
-
