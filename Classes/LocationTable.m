@@ -13,30 +13,22 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-@synthesize locationEditor, nibLoadedCell, editLocation;
+@synthesize locationEditor, nibLoadedCell, editLocation, locationArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	// Set title and right bar button to add button
 	self.title = @"Locations";
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
 											  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																	target:self
 																	action:@selector(handleAddTapped)] autorelease];
-	locationArray = [[NSMutableArray alloc] init];
-	NSArray *loadedArray = [[[NSArray alloc] init] autorelease];
-	loadedArray = [NSArray arrayWithArray:[(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] loadData]];
-	for (NSMutableDictionary *locationDictionary in loadedArray) {
-		Location *location = [[Location alloc] init];
-		location.title = [locationDictionary valueForKey:@"Title"];
-		location.zipCode = [locationDictionary valueForKey:@"Zipcode"];
-		[locationArray addObject:location];
-		[location release];
-	}
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	// If table item was added or edited, update table display
 	if (editLocation) {
 		NSIndexPath *updatedPath = [NSIndexPath	indexPathForRow: [locationArray indexOfObject: editLocation] inSection: 0];
 		NSArray *updatedPaths = [NSArray arrayWithObject:updatedPath];

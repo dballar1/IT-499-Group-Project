@@ -6,20 +6,19 @@
 //  Copyright 2011 George Mason University. All rights reserved.
 //
 
+#import <YAJLiOS/YAJL.h>
 #import "WeatherMapAppDelegate.h"
 #import "MapViewController.h"
-
+#import "Location.h"
 
 @implementation WeatherMapAppDelegate
 
-@synthesize window, navigationController;
+@synthesize window, navigationController, forecasts, latLong;
 
 #pragma mark -
 #pragma mark Locations from File
 
 - (NSArray *) loadData {
-	// Create a path for plist file
-	//NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
 	NSError *error;
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -33,6 +32,51 @@
 	return locations;
 }
 
+-(NSMutableArray *) getLocations {
+	// Initialize and load location array from app delegate > plist
+	locationArray = [[NSMutableArray alloc] init];
+	NSArray *loadedArray = [[[NSArray alloc] init] autorelease];
+	loadedArray = [self loadData];
+	for (NSMutableDictionary *locationDictionary in loadedArray) {
+		// Create a location array from NSDictionary
+		Location *location = [[Location alloc] init];
+		location.title = [locationDictionary valueForKey:@"Title"];
+		location.zipCode = [locationDictionary valueForKey:@"Zipcode"];
+		[locationArray addObject:location];
+		[location release];
+	}
+	return locationArray;
+}
+
+-(void) getConnectionData {
+	for (Location *location in locationArray) {
+		forecasts = [[NSMutableArray alloc] init];
+		latLong = [[NSMutableArray alloc] init];
+		NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
+		NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%@&format=json&num_of_days=1&key=%@&includeLocation=yes", 
+							location.zipCode, @"b86e961893190455111404"];
+		NSURL *url = [NSURL URLWithString:urlStr];
+		NSURLRequest *request = [NSURLRequest requestWithURL:url];
+		[NSURLConnection connectionWithRequest:request delegate:self];
+	}
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    responseData = [[NSMutableData alloc] init];
+}
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"Error loading: %@", error);
+}
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSDictionary *json = [responseData yajl_JSON];
+	[forecasts addObject: [json valueForKeyPath:@"data.current_condition"]];
+	[latLong addObject: [json valueForKeyPath:@"data.nearest_area"]];
+	[responseData release];
+}
+
 - (void) saveData:(NSMutableArray *) locations {
 	NSError *error;
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -44,14 +88,18 @@
 		[fileManager copyItemAtPath:bundle toPath:path error:&error];
 	}
 	[locations writeToFile:path atomically:YES];
+	[self getLocations];
+	[self getConnectionData];
 }
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application launch.
+    [self getLocations];
+	[self getConnectionData];
+	
+	// Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];

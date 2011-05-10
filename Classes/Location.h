@@ -15,7 +15,6 @@
 }
 
 - (id)initWithTitle:(NSString *)newTitle zipCode:(NSString *)newZipCode;
-			
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *zipCode;

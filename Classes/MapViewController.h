@@ -9,28 +9,31 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "Location.h"
 #import "LocationTable.h"
 #import "WeatherMapAppDelegate.h"
+#import "WeatherMapAnnotation.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
-	NSMutableData *responseData;
-	NSArray *forecasts;
 	NSMutableArray *annotationList;
-	CLLocationCoordinate2D myLocation;
 	LocationTable *locationTable;
-	WeatherMapAppDelegate *weatherAppDelegate;
+	NSMutableArray *locationArray;
+	NSMutableArray *forecasts;
+	NSMutableArray *latLong;
+	//NSMutableData *responseData;
 }
 
-@property (nonatomic, retain) IBOutlet LocationTable *locationTable;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
-@property (nonatomic, retain) NSMutableData *responseData;
-@property (nonatomic, retain) NSArray *forecasts;
 @property (nonatomic, retain) NSMutableArray *annotationList;
-//@property (nonatomic, retain) WeatherMapAppDelegate *weatherAppDelegate;
+@property (nonatomic, retain) IBOutlet LocationTable *locationTable;
+@property (nonatomic, retain) NSMutableArray *forecasts;
+@property (nonatomic, retain) NSMutableArray *latLong;
 
 -(IBAction) showLocationTable;
--(void) placeAnnotations;
--(void) calloutTapped;
+//-(void) getLocations;
+//-(void) getConnectionData;
+-(void) createAnnotations;
+-(void) removeAllAnnotations;
 
 @end

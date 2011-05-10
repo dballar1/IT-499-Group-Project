@@ -14,13 +14,11 @@
 	UITextField *titleField;
 	UITextField *zipCodeField;
 	Location *location;
-	NSMutableDictionary *editingLocation;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *titleField;
 @property (nonatomic, retain) IBOutlet UITextField *zipCodeField;
 @property (nonatomic, retain) Location *location;
-@property (nonatomic, retain) NSMutableDictionary *editingLocation;
 
 - (IBAction)done;
 

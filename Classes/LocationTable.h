@@ -15,10 +15,10 @@
 	NSMutableArray *locationArray;
 	LocationEditorView *locationEditor;
 	UITableViewCell *nibLoadedCell;
-	WeatherMapAppDelegate *weatherAppDelegate;
 	Location *editLocation;
 }
 
+@property (nonatomic, retain) IBOutlet NSMutableArray *locationArray;
 @property (nonatomic, retain) IBOutlet LocationEditorView *locationEditor;
 @property (nonatomic, retain) IBOutlet UITableViewCell *nibLoadedCell;
 @property (nonatomic, retain) Location *editLocation;

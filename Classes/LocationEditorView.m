@@ -11,7 +11,7 @@
 
 @implementation LocationEditorView
 
-@synthesize titleField, zipCodeField, location, editingLocation;
+@synthesize titleField, zipCodeField, location;
 
 - (IBAction)done {
 	[self.navigationController popViewControllerAnimated:YES];
@@ -25,11 +25,9 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
 	if(textField == self.titleField) {
 		self.location.title = self.titleField.text;
-		//[editingLocation setValue:self.titleField.text forKey:@"Title"];
 	}
 	else if(textField == self.zipCodeField) {
 		self.location.zipCode = self.zipCodeField.text;
-		//[editingLocation setValue:self.zipCodeField.text forKey:@"Zipcode"];
 	}
 	
 }
@@ -62,15 +60,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+	// Display location to edit or message if location is nil
 	if (location.title) {
 		self.title = location.title;
+		self.titleField.text = location.title;
+		self.zipCodeField.text = location.zipCode;
 	} else {
 		self.title = @"Add Location";
+		self.titleField.text = nil;
+		self.zipCodeField.text = nil;
 	}
-	self.titleField.text = location.title;
-	self.zipCodeField.text = location.zipCode;
-	//self.titleField.text = [editingLocation valueForKey:@"Title"];
-	//self.zipCodeField.text = [editingLocation valueForKey:@"Zipcode"];
 }
 
 /*
@@ -83,11 +82,6 @@
     [super viewWillDisappear:animated];
 	self.location.title = self.titleField.text;
 	self.location.zipCode = self.zipCodeField.text;
-	//NSMutableDictionary *newLocation = [[[NSMutableDictionary alloc] init] autorelease];
-	//[newLocation setObject:self.titleField.text forKey:@"Title"];
-	//[newLocation setObject:self.zipCodeField.text forKey:@"Zipcode"];
-	//[editingLocation setDictionary:newLocation];
-	//NSLog(@"%@, %@", [editingLocation valueForKey:@"Title"], [editingLocation valueForKey:@"Zipcode"]);
 }
 
 /*
@@ -107,10 +101,7 @@
 #pragma mark Memory management
 
 - (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc. that aren't in use.
 }
 
 - (void)viewDidUnload {

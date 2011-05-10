@@ -7,13 +7,12 @@
 //
 
 #import "MapViewController.h"
-#import "WeatherMapAnnotation.h"
 #import <CoreLocation/CoreLocation.h>
 #import <YAJLiOS/YAJL.h>
 
 @implementation MapViewController
 
-@synthesize mapView, responseData, forecasts, locationTable, annotationList;//, weatherAppDelegate;
+@synthesize mapView, locationTable, annotationList, forecasts, latLong;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -25,26 +24,14 @@
 																			 style:UIBarButtonItemStyleBordered 
 																			target:self 
 																			 action:@selector(showLocationTable)] autorelease];
-	/*
-	NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
-    NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%d&format=json&num_of_days=5&key=%@&includeLocation=yes", 
-                        22030,
-                        @"b86e961893190455111404"];
-    NSURL *url = [NSURL URLWithString:urlStr];
-	*/
-
-	myLocation.latitude = 38.84;
-	myLocation.longitude = -77.35;
-	// Set Location to Fairfax
+	// Center region to Kansas
     MKCoordinateRegion newRegion;
-    newRegion.center.latitude = myLocation.latitude; //38.84;
-    newRegion.center.longitude = myLocation.longitude; //-77.35;
-    //newRegion.span.latitudeDelta = 0.50;
-    //newRegion.span.longitudeDelta = 0.50;
+    newRegion.center.latitude = 39.30;
+    newRegion.center.longitude = -95.80;
 	newRegion.span.latitudeDelta = 40;
 	newRegion.span.longitudeDelta = 40;
-	
     [self.mapView setRegion:newRegion animated:YES];
+	mapView.delegate = self;
 	if ([CLLocationManager locationServicesEnabled]) {
 		CLLocationManager *manager = [[CLLocationManager alloc] init];
 		manager.delegate = self;
@@ -54,13 +41,25 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	
 }
-/*
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+	locationArray = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] getLocations];
+	//NSLog(@"ViewController: locationArray-%d", [locationArray count]);
+	forecasts = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] forecasts];
+	//NSLog(@"ViewController: forecasts-%d", [forecasts count]);	
+	latLong = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] latLong];
+	//NSLog(@"ViewController: latLong-%d", [latLong count]);
+	[self removeAllAnnotations];
+	annotationList = nil;
+	annotationList = [[NSMutableArray alloc] init];
+	[self createAnnotations];
+	//NSLog(@"ViewController: annotationList-%d", [annotationList count]);
+	[mapView addAnnotations:annotationList];
+
 }
-*/
+
 /*
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
@@ -83,100 +82,75 @@
 #pragma mark -
 #pragma mark Delegate Methods
 
-- (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation {
-	
+- (MKAnnotationView *) mapView: (MKMapView *) map viewForAnnotation: (id<MKAnnotation>) annotation {
 	// if it's the user location, just return nil.
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
 	
 	// Create a pin object
-	MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: [annotation title]];
-	if (pin == nil) {
-		MKPinAnnotationView *pinView = [[[MKPinAnnotationView alloc]
-											   initWithAnnotation:annotation reuseIdentifier: [annotation title]] autorelease];
+	MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: annotation.title];
+	if (!pin) {
+		MKPinAnnotationView *pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation
+																		reuseIdentifier: annotation.title] autorelease];
 		pinView.pinColor = MKPinAnnotationColorRed;
 		pinView.animatesDrop = YES;
 		pinView.canShowCallout = YES;
-
 		UIButton *calloutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-		[calloutButton addTarget:self action:@selector(calloutTapped) forControlEvents:UIControlEventTouchUpInside];
+		[calloutButton addTarget:self
+						  action:@selector(calloutTapped)
+				forControlEvents:UIControlEventTouchUpInside];
 		pinView.rightCalloutAccessoryView = calloutButton;
 		return pinView;
 	} else {
 		pin.annotation = annotation;
 	}
-	
 	return pin;
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    responseData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [responseData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"Error loading: %@", error);
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSDictionary *json = [responseData yajl_JSON];
-    self.forecasts = [json valueForKeyPath:@"data.weather"];
-	[self placeAnnotations];
-}
-
-- (void)locationManager:(CLLocationManager *)manager 
-    didUpdateToLocation:(CLLocation *)newLocation 
-           fromLocation:(CLLocation *)oldLocation {
-	
-    NSLog(@"location = %@", newLocation);   
-    NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
-    NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%f,%f&format=json&num_of_days=5&key=%@", 
-                        newLocation.coordinate.latitude, 
-                        newLocation.coordinate.longitude,
-                        @"b86e961893190455111404"];
-    NSURL *url = [NSURL URLWithString:urlStr];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [NSURLConnection connectionWithRequest:request delegate:self];
-    [manager stopUpdatingLocation];
-}
-
 #pragma mark -
-#pragma mark RootViewController actions
+#pragma mark MapViewController actions
+
+-(void) createAnnotations {
+	NSLog(@"Forecast Objects: %d, Location Objects: %d", [forecasts count], [latLong count]);
+	NSMutableArray *temps = [[NSMutableArray alloc] init];
+	for (NSDictionary *forecast in forecasts) {
+		[temps addObject:[[forecast valueForKey:@"temp_F"] objectAtIndex:0]];
+	}
+	NSMutableArray *coords = [[NSMutableArray alloc] init];
+	for (NSDictionary *loc in latLong) {
+		CLLocation *location = [[CLLocation alloc] initWithLatitude:[[[loc valueForKey:@"latitude"] objectAtIndex:0] doubleValue]
+														  longitude:[[[loc valueForKey:@"longitude"] objectAtIndex:0] doubleValue]];
+		[coords addObject: location];
+		[location release];
+	}
+	for (int i = 0; i < [locationArray count]; i++) {
+		CLLocation *location = [coords objectAtIndex:i];
+		WeatherMapAnnotation *annote = [[WeatherMapAnnotation alloc] initWithName:[[locationArray objectAtIndex:i] title] 
+																		 latitude:location.coordinate.latitude
+																		longitude:location.coordinate.longitude];
+		annote.subtitle = [NSString stringWithFormat:@"%@°F", [temps objectAtIndex:i]];
+		[annotationList addObject:annote];
+		NSLog(@"Title = %@, Subtitle = %@, Lat = %f, Long = %f", annote.title, annote.subtitle, annote.coordinate.latitude, annote.coordinate.longitude);
+		[annote release];
+	}
+}
+
+-(void)removeAllAnnotations {
+	//Get the current user location annotation.
+	id userAnnotation = mapView.userLocation;
+	
+	//Remove all added annotations
+	[mapView removeAnnotations:mapView.annotations]; 
+	
+	// Add the current user location annotation again.
+	if(userAnnotation != nil) {
+		[mapView addAnnotation:userAnnotation];
+	}
+}
 
 -(IBAction) showLocationTable {
+	locationTable.locationArray = locationArray;
 	[self.navigationController pushViewController:locationTable animated:YES];
-}
-
-- (void) placeAnnotations {
-	// URL for location based annotation
-	/*
-	 NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
-	 NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%f,%f&format=json&num_of_days=5&key=%@", 
-														myLocation.latitude, 
-														myLocation.longitude,
-														@"b86e961893190455111404"];
-	 NSURL *url = [NSURL URLWithString:urlStr];
-	 NSURLRequest *request = [NSURLRequest requestWithURL:url];
-	 NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
-	 */
-	
-	// Basic Annotation creation to be replaced by PList locations
-	WeatherMapAnnotation *newAnnotation = [WeatherMapAnnotation alloc];
-	CLLocationCoordinate2D location;
-	location.latitude = 38.84;
-	location.longitude = -77.35;
-	[newAnnotation setCoordinate: location];
-	[newAnnotation setTitle: @"Zipcode/Title"];
-	NSDictionary *forecast = [forecasts objectAtIndex:0];
-	NSString *weather = [NSString stringWithFormat:@"%@°F - %@°F: %@",
-						 [forecast objectForKey:@"tempMinF"],
-						 [forecast objectForKey:@"tempMaxF"],
-						 [[forecast valueForKeyPath:@"weatherDesc.value"] objectAtIndex:0]];
-	[newAnnotation setSubtitle: weather];
-	[mapView addAnnotation: newAnnotation];
 }
 
 -(void) calloutTapped {
@@ -203,7 +177,6 @@
 	[mapView dealloc];
     [super dealloc];
 }
-
 
 @end
 

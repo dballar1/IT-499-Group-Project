@@ -17,5 +17,7 @@
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *subtitle;
-//- (void) moveAnnotation: (CLLocationCoordinate2D) newCoordinate;
+
+- (id)initWithName:(NSString *) name latitude: (double) latitude longitude: (double) longitude;
+
 @end
