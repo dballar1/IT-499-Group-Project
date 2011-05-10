@@ -22,8 +22,8 @@
 	NSMutableArray *locationArray;
 	NSMutableArray *forecasts;
 	NSMutableArray *latLong;
+	NSMutableArray *requestArray;
 	detailView *weatherDetail;
-	//NSMutableData *responseData;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
@@ -31,11 +31,10 @@
 @property (nonatomic, retain) IBOutlet LocationTable *locationTable;
 @property (nonatomic, retain) NSMutableArray *forecasts;
 @property (nonatomic, retain) NSMutableArray *latLong;
+@property (nonatomic, retain) NSMutableArray *requestArray;
 @property (nonatomic, retain) IBOutlet detailView *weatherDetail;
 
 -(IBAction) showLocationTable;
-//-(void) getLocations;
-//-(void) getConnectionData;
 -(void) createAnnotations;
 -(void) removeAllAnnotations;
 

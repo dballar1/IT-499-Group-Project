@@ -34,6 +34,16 @@
 		NSArray *updatedPaths = [NSArray arrayWithObject:updatedPath];
 		[self.tableView reloadRowsAtIndexPaths:updatedPaths withRowAnimation:NO];
 		editLocation = nil;
+		
+		NSMutableArray *saveArray = [[NSMutableArray alloc] init];
+		for (Location *location in locationArray) {
+			NSDictionary *locationDictionary = [[NSDictionary alloc] initWithObjectsAndKeys: location.title, @"Title", 
+												location.zipCode, @"Zipcode", nil];
+			[saveArray addObject: locationDictionary];
+			[locationDictionary release];
+		}
+		[(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] saveData:saveArray];
+		[saveArray release];
 	}
 	[self.tableView reloadData];
 }
@@ -61,6 +71,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	// Save only when returning to map view
+	/*
 	if (!editLocation) {
 		NSMutableArray *saveArray = [[NSMutableArray alloc] init];
 		for (Location *location in locationArray) {
@@ -72,6 +83,7 @@
 		[(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] saveData:saveArray];
 		[saveArray release];
 	}
+	 */
 }
 /*
 - (void)viewDidDisappear:(BOOL)animated {
@@ -125,6 +137,15 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source.
 		[locationArray removeObjectAtIndex:indexPath.row];
+		NSMutableArray *saveArray = [[NSMutableArray alloc] init];
+		for (Location *location in locationArray) {
+			NSDictionary *locationDictionary = [[NSDictionary alloc] initWithObjectsAndKeys: location.title, @"Title", 
+												location.zipCode, @"Zipcode", nil];
+			[saveArray addObject: locationDictionary];
+			[locationDictionary release];
+		}
+		[(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] saveData:saveArray];
+		[saveArray release];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }    
 }

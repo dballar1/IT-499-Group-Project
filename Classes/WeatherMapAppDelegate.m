@@ -13,7 +13,7 @@
 
 @implementation WeatherMapAppDelegate
 
-@synthesize window, navigationController, forecasts, latLong;
+@synthesize window, navigationController, forecasts, latLong, requestArray;
 
 #pragma mark -
 #pragma mark Locations from File
@@ -48,16 +48,25 @@
 		[locationArray addObject:location];
 		[location release];
 	}
+	//for (int i = 0; i < [locationArray count]; i++) {
+	//	NSLog(@"Delegate: %d. Title = %@", i, [[locationArray objectAtIndex:i] title]);
+	//}
 	return locationArray;
 }
 
 -(void) getConnectionData {
 	Location *location = [[[Location alloc] init] autorelease];
-	//for (Location *location in locationArray) {
 	for (int i = 0; i < [locationArray count]; i++) {
 		location = [locationArray objectAtIndex:i];
-		forecasts = [[NSMutableArray alloc] init];
-		latLong = [[NSMutableArray alloc] init];
+		if (!forecasts) {
+			forecasts = [[NSMutableArray alloc] init];
+		}
+		if (!latLong) {
+			latLong = [[NSMutableArray alloc] init];
+		}
+		if (!requestArray) {
+			requestArray = [[NSMutableArray alloc] init];
+		}
 		NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
 		NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%@&format=json&num_of_days=1&key=%@&includeLocation=yes", 
 							location.zipCode, @"b86e961893190455111404"];
@@ -80,6 +89,7 @@
     NSDictionary *json = [responseData yajl_JSON];
 	[forecasts addObject: [json valueForKeyPath:@"data.current_condition"]];
 	[latLong addObject: [json valueForKeyPath:@"data.nearest_area"]];
+	[requestArray addObject: [json valueForKeyPath:@"data.request"]];
 	[responseData release];
 }
 
@@ -94,6 +104,9 @@
 		[fileManager copyItemAtPath:bundle toPath:path error:&error];
 	}
 	[locations writeToFile:path atomically:YES];
+	forecasts = nil;
+	latLong = nil;
+	requestArray = nil;
 	[self getLocations];
 	[self getConnectionData];
 }
@@ -163,6 +176,9 @@
 
 
 - (void)dealloc {
+	[forecasts release];
+	[latLong release];
+	[requestArray release];
 	[navigationController release];
 	[window release];
 	[super dealloc];

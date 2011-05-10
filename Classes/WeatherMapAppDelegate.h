@@ -14,6 +14,7 @@
 	NSMutableArray *locationArray;
 	NSMutableArray *forecasts;
 	NSMutableArray *latLong;
+	NSMutableArray *requestArray;
 	NSMutableData *responseData;
 }
 
@@ -21,6 +22,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) IBOutlet NSMutableArray *forecasts;
 @property (nonatomic, retain) IBOutlet NSMutableArray *latLong;
+@property (nonatomic, retain) IBOutlet NSMutableArray *requestArray;
 
 - (NSArray *) loadData;
 - (NSMutableArray *) getLocations;

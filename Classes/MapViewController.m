@@ -12,7 +12,7 @@
 
 @implementation MapViewController
 
-@synthesize mapView, locationTable, annotationList, forecasts, latLong, weatherDetail;
+@synthesize mapView, locationTable, annotationList, forecasts, latLong, requestArray, weatherDetail;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -48,6 +48,7 @@
 	locationArray = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] getLocations];
 	forecasts = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] forecasts];
 	latLong = [(WeatherMapAppDelegate *)[[UIApplication sharedApplication] delegate] latLong];
+	requestArray = [(WeatherMapAppDelegate *) [[UIApplication sharedApplication] delegate] requestArray];
 	[self removeAllAnnotations];
 	annotationList = nil;
 	annotationList = [[NSMutableArray alloc] init];
@@ -65,8 +66,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 }
-*/
-
+ */
 /*
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -80,8 +80,7 @@
 
 - (MKAnnotationView *) mapView: (MKMapView *) map viewForAnnotation: (id<MKAnnotation>) annotation {
 	// if it's the user location, just return nil.
-    if ([annotation isKindOfClass:[MKUserLocation class]])
-        return nil;
+    //if ([annotation isKindOfClass:[MKUserLocation class]]) return nil;
 	
 	// Create a pin object
 	MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: annotation.title];
@@ -110,25 +109,12 @@
 #pragma mark MapViewController actions
 
 -(void) createAnnotations {
-	/*
-	for (int i = 0; i < [locationArray count]; i++) {
-		NSLog(@"Title: %@, Temp: %@, Lat: %f, Long: %f",[[locationArray objectAtIndex:i] title],
-			  [[[forecasts objectAtIndex:i] valueForKey:@"temp_F"] objectAtIndex:0],
-			  [[[latLong objectAtIndex:i] valueForKey:@"latitude"] objectAtIndex:0],
-			  [[[latLong objectAtIndex:i] valueForKey:@"longitude"] objectAtIndex:0]);
-	}
-	 */
 	NSMutableArray *temps = [[NSMutableArray alloc] init];
 	NSDictionary *forecast = [[[NSDictionary alloc] init] autorelease];
 	for (int i = 0; i < [forecasts count]; i++) {
 		forecast = [forecasts objectAtIndex:i];
 		[temps addObject:[[forecast valueForKey:@"temp_F"] objectAtIndex:0]];
 	}
-	/*
-	for (NSDictionary *forecast in forecasts) {
-		[temps addObject:[[forecast valueForKey:@"temp_F"] objectAtIndex:0]];
-	}
-	 */
 	NSMutableArray *coords = [[NSMutableArray alloc] init];
 	NSDictionary *loc = [[[NSDictionary alloc] init] autorelease];
 	for (int i = 0; i < [latLong count]; i++) {
@@ -138,23 +124,20 @@
 		[coords addObject: location];
 		[location release];
 	}
-	/*
-	for (NSDictionary *loc in latLong) {
-		CLLocation *location = [[CLLocation alloc] initWithLatitude:[[[loc valueForKey:@"latitude"] objectAtIndex:0] doubleValue]
-														  longitude:[[[loc valueForKey:@"longitude"] objectAtIndex:0] doubleValue]];
-		[coords addObject: location];
-		[location release];
-	}
-	 */
 	for (int i = 0; i < [locationArray count]; i++) {
-		CLLocation *location = [coords objectAtIndex:i];
-		WeatherMapAnnotation *annote = [[WeatherMapAnnotation alloc] initWithName:[[locationArray objectAtIndex:i] title] 
-																		 latitude:location.coordinate.latitude
-																		longitude:location.coordinate.longitude];
-		annote.subtitle = [NSString stringWithFormat:@"%@°F", [temps objectAtIndex:i]];
-		[annotationList addObject:annote];
-		NSLog(@"Title = %@, Subtitle = %@, Lat = %f, Long = %f", annote.title, annote.subtitle, annote.coordinate.latitude, annote.coordinate.longitude);
-		[annote release];
+		for (int j = 0; j < [requestArray count]; j++) {
+			if ([[[locationArray objectAtIndex:i] zipCode] 
+				 isEqualToString: [[[requestArray objectAtIndex:j] valueForKey:@"query"] objectAtIndex:0]]) {
+				CLLocation *location = [coords objectAtIndex:j];
+				WeatherMapAnnotation *annote = [[WeatherMapAnnotation alloc] initWithName:[[locationArray objectAtIndex:i] title] 
+																				 latitude:location.coordinate.latitude
+																				longitude:location.coordinate.longitude];
+				annote.subtitle = [NSString stringWithFormat:@"%@°F", [temps objectAtIndex:j]];
+				[annotationList addObject:annote];
+				[annote release];
+			}
+		}
+		
 	}
 	[coords release];
 	[temps release];
