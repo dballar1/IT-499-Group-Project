@@ -133,7 +133,6 @@
 	 */
 }
 
-
 #pragma mark -
 #pragma mark Memory management
 
@@ -149,10 +148,8 @@
     // For example: self.myOutlet = nil;
 }
 
-
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end
